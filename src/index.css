@@ -16,7 +16,7 @@ body {
   float: center;
 background-color: white;
   padding-top: 20px;
-  z-index: 3;
+  z-index: 1;
 }
 #search-input {
   width: 40%;
