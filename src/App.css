@@ -12,11 +12,11 @@ body {
 #search-body {
   text-align: center;
   position: sticky;
-  top: 0;
+    top: 30;
   float: center;
 background-color: white;
   padding-top: 20px;
-  z-index: 1;
+  z-index: 3;
 }
 #search-input {
   width: 40%;
@@ -116,10 +116,10 @@ width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
   position: sticky;
-  top: 90;
-  float: center;
+ top: 0;
+    float: center;
   background-color: white;
-  z-index: 1;
+  z-index: 0;
   padding-bottom: 10px;
 display: flex;
 flex-direction: row;
