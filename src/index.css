@@ -40,8 +40,6 @@ background-color: white;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 1.5rem;
- 
-
   
 }
 #recipe-card {
@@ -137,6 +135,7 @@ flex-direction: row;
   font-family: "Mandali", sans-serif;
   background-color:aliceblue;
   z-index: 2;
+  border-radius: 20px;
 }
 #modal-img {
   width: 50%;
@@ -174,9 +173,7 @@ flex-direction: row;
   font-family: "Mandali", sans-serif;
   color: red;
 }
-:modal body {
-  background-color: #f7d488;
-}
+
 #details-btn{
   background-color: black;
   height: 40px;
