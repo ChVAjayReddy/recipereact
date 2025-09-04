@@ -21,9 +21,7 @@ A simple and interactive **Recipe Finder web app** built with **React.js**. User
 
 ## 🛠️ Tech Stack  
 - **React.js (CRA)** – Component-based UI  
-- **React Router** – Navigation  
 - **React Hooks** – `useState`, `useEffect` for state management  
-- **Tailwind CSS** – Styling  
 - **gh-pages** – Deployment  
 
 ---
