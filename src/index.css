@@ -24,7 +24,7 @@ background-color: white;
   height: 50px;
   border: 10px solid #feeba8;
   border-radius: 20px;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
 }
 #search-input:focus::placeholder {
