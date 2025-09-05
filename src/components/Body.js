@@ -212,7 +212,7 @@ const Body = () => {
           </p>
           <p>
             {" "}
-            <strong>Country :</strong> {modalrecipe.strArea}
+            <strong>Country of Origin :</strong> {modalrecipe.strArea}
           </p>
           <table id="table">
             <thead>
