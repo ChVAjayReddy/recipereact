@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Categories, Areas, Youtubelogo } from "../utils/Data";
 import Modal from "react-modal";
+import { IoFish } from "react-icons/io5";
+import { GiRoastChicken } from "react-icons/gi";
+import { GiBreadSlice } from "react-icons/gi";
+import { GiTomato } from "react-icons/gi";
+import { GiCarrot } from "react-icons/gi";
+import { IoEggSharp } from "react-icons/io5";
 
 Modal.setAppElement("#root");
 const Body = () => {
@@ -66,24 +72,73 @@ const Body = () => {
           placeholder="Enter Ingredient"
         ></input>
       </div>
+<p style={{ textAlign: "center" }}>
+        Click following ingradient to find recipes
+      </p>
       <div id="search-btn-body">
-        <p>Click following ingradients to find recipes</p>
-        <button id="search-btn" onClick={() => setsearchinput("chicken")}>
-          chicken
-        </button>
-        <button id="search-btn" onClick={() => setsearchinput("fish")}>
-          fish
-        </button>
-        <button id="search-btn" onClick={() => setsearchinput("prawns")}>
-          prawns
-        </button>
-        <button id="search-btn" onClick={() => setsearchinput("tomato")}>
-          tomato
-        </button>
-        <button id="search-btn" onClick={() => setsearchinput("onion")}>
-          onion
-        </button>
+        <IoEggSharp
+          onClick={() => setsearchinput("egg")}
+          style={{
+            width: "40px",
+            height: "40px",
+            color: "#A52A2A",
+            cursor: "pointer",
+            marginRight: "10px",
+          }}
+        />
+        <GiRoastChicken
+          onClick={() => setsearchinput("chicken")}
+          style={{
+            width: "40px",
+            height: "40px",
+            marginRight: "10px",
+            color: "#ffd916",
+            cursor: "pointer",
+          }}
+        />
+        <IoFish
+          onClick={() => setsearchinput("fish")}
+          style={{
+            width: "40px",
+            height: "40px",
+            color: "skyblue",
+            cursor: "pointer",
+            marginRight: "10px",
+          }}
+        />
+        <GiCarrot
+          onClick={() => setsearchinput("carrot")}
+          style={{
+            width: "40px",
+            height: "40px",
+            color: "#F86A38",
+            cursor: "pointer",
+            marginRight: "10px",
+          }}
+        />
+
+        <GiTomato
+          onClick={() => setsearchinput("tomato")}
+          style={{
+            width: "40px",
+            height: "40px",
+            color: "red",
+            cursor: "pointer",
+            marginRight: "10px",
+          }}
+        />
+        <GiBreadSlice
+          onClick={() => setsearchinput("bread")}
+          style={{
+            width: "40px",
+            height: "40px",
+            color: "#B07645",
+            cursor: "pointer",
+            marginRight: "10px",
+          }}
+        />
       </div>
+
       <div id="filter-body">
         <div>
         <label>Filter By Category: </label>

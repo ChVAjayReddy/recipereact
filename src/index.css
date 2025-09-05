@@ -115,7 +115,10 @@ width: 100%;
   margin-left: 5px;
 }
 #search-btn-body {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+
 }
 #filter-body {
   text-align: center;
