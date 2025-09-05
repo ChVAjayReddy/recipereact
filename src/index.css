@@ -1,9 +1,12 @@
+
 #header {
   text-align: center;
   font-family: "Rock Salt", cursive;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 80px;
+
+  
 }
 body {
   background: white;
@@ -23,6 +26,11 @@ background-color: white;
   height: 50px;
   border: 10px solid #feeba8;
   border-radius: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+#search-input:focus::placeholder {
+  color: transparent;
 }
 #search-input:focus {
   outline: none;
@@ -107,7 +115,10 @@ width: 100%;
   margin-left: 5px;
 }
 #search-btn-body {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+
 }
 #filter-body {
   text-align: center;
