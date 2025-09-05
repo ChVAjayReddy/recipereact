@@ -10,6 +10,7 @@ import { GiCarrot } from "react-icons/gi";
 import { IoEggSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { FaYoutube } from "react-icons/fa";
+import { TbEggs } from "react-icons/tb";
 
 Modal.setAppElement("#root");
 const Body = () => {
@@ -78,7 +79,7 @@ const Body = () => {
         Click following ingradient to find recipes
       </p>
       <div id="search-btn-body">
-        <IoEggSharp
+        <TbEggs 
           onClick={() => setsearchinput("egg")}
           style={{
             width: "40px",
@@ -96,7 +97,7 @@ const Body = () => {
             marginRight: "10px",
             color: "#ffd916",
             cursor: "pointer",
-          }}
+                     }}
         />
         <IoFish
           onClick={() => setsearchinput("fish")}
@@ -172,7 +173,7 @@ const Body = () => {
           <p style={{ textAlign: "center", fontWeight: "bolder" }}>
             Recipes Found : {displayrecipes.length}
           </p>
-          <div id="display-body">
+          <div id="display-body" >
             {displayrecipes.map((recipe, index) => (
               <div id="recipe-card" key={index}>
                 <p id="recipe-name">{recipe.strMeal}</p>
