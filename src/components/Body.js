@@ -9,6 +9,7 @@ import { GiTomato } from "react-icons/gi";
 import { GiCarrot } from "react-icons/gi";
 import { IoEggSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import { FaYoutube } from "react-icons/fa";
 
 Modal.setAppElement("#root");
 const Body = () => {
@@ -73,7 +74,7 @@ const Body = () => {
           placeholder="Enter Ingredient"
         ></input>
       </div>
-<p style={{ textAlign: "center" }}>
+      <p style={{ textAlign: "center" }}>
         Click following ingradient to find recipes
       </p>
       <div id="search-btn-body">
@@ -97,7 +98,7 @@ const Body = () => {
             cursor: "pointer",
           }}
         />
-        <IoFish 
+        <IoFish
           onClick={() => setsearchinput("fish")}
           style={{
             width: "40px",
@@ -142,23 +143,24 @@ const Body = () => {
 
       <div id="filter-body">
         <div>
-        <label>Filter By Category: </label>
-        <select className="filterdropdown" onChange={(e) => filter(e)}>
-          {Categories.map((category, index) => (
-            <option key={index} value={category}>
-              {category}
-            </option>
-          ))}
-        </select></div>
+          <label>Filter By Category: </label>
+          <select className="filterdropdown" onChange={(e) => filter(e)}>
+            {Categories.map((category, index) => (
+              <option key={index} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
         <div>
-        <label> Filter By Country: </label>
-        <select className="filterdropdown" onChange={(e) => filter(e)}>
-          {Areas.map((area, index) => (
-            <option key={index} value={area}>
-              {area}
-            </option>
-          ))}
-        </select>
+          <label> Filter By Country: </label>
+          <select className="filterdropdown" onChange={(e) => filter(e)}>
+            {Areas.map((area, index) => (
+              <option key={index} value={area}>
+                {area}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
       {displayrecipes.length == 0 && loading == true ? (
@@ -167,7 +169,9 @@ const Body = () => {
         <p id="norecipe">No Recipe Found 🍽️</p>
       ) : (
         <div>
-          <p style={{textAlign:"center", fontWeight:"bolder"}}>Recipes Found : {displayrecipes.length}</p>
+          <p style={{ textAlign: "center", fontWeight: "bolder" }}>
+            Recipes Found : {displayrecipes.length}
+          </p>
           <div id="display-body">
             {displayrecipes.map((recipe, index) => (
               <div id="recipe-card" key={index}>
@@ -177,7 +181,7 @@ const Body = () => {
                   <p id="recipe-area">{recipe.strArea}</p>
                   <p id="recipe-category">{recipe.strCategory}</p>
                 </div>
-               
+
                 <button
                   id="details-btn"
                   onClick={() => {
@@ -187,14 +191,9 @@ const Body = () => {
                 >
                   See Complete Recipe
                 </button>
-                <button id="recipe-youtube">
-                  <a href={recipe.strYoutube} target="_blank">
-                    <img
-                      src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
-                      style={{ height: "30px" }}
-                    ></img>
-                  </a>
-                </button>
+                <a href={recipe.strYoutube} target="_blank">
+                  <FaYoutube color="#ff0000" size={30} />
+                </a>
               </div>
             ))}
           </div>
@@ -202,18 +201,19 @@ const Body = () => {
       )}
       <Modal isOpen={modalIsOpen}>
         <div id="modal-body">
-          <RxCross2 id="close-btn"
-          onClick={() => setModalIsOpen(false)}
-          style={{
-            width: "20px",
-            height: "20px",
-            color: "red",
-            cursor: "pointer",
-            border:"1px solid red",
-            borderRadius:"10px"
-              }}
-        />
-         
+          <RxCross2
+            id="close-btn"
+            onClick={() => setModalIsOpen(false)}
+            style={{
+              width: "20px",
+              height: "20px",
+              color: "red",
+              cursor: "pointer",
+              border: "1px solid red",
+              borderRadius: "10px",
+            }}
+          />
+
           <br></br>
           <img id="modal-img" src={modalrecipe.strMealThumb}></img>
           <p id="modal-name">{modalrecipe.strMeal}</p>
