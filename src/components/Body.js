@@ -8,6 +8,7 @@ import { GiBreadSlice } from "react-icons/gi";
 import { GiTomato } from "react-icons/gi";
 import { GiCarrot } from "react-icons/gi";
 import { IoEggSharp } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
 
 Modal.setAppElement("#root");
 const Body = () => {
@@ -96,7 +97,7 @@ const Body = () => {
             cursor: "pointer",
           }}
         />
-        <IoFish
+        <IoFish 
           onClick={() => setsearchinput("fish")}
           style={{
             width: "40px",
@@ -201,9 +202,18 @@ const Body = () => {
       )}
       <Modal isOpen={modalIsOpen}>
         <div id="modal-body">
-          <button id="close-btn" onClick={() => setModalIsOpen(false)}>
-            Close
-          </button>
+          <RxCross2 id="close-btn"
+          onClick={() => setModalIsOpen(false)}
+          style={{
+            width: "20px",
+            height: "20px",
+            color: "red",
+            cursor: "pointer",
+            border:"1px solid red",
+            borderRadius:"10px"
+              }}
+        />
+         
           <br></br>
           <img id="modal-img" src={modalrecipe.strMealThumb}></img>
           <p id="modal-name">{modalrecipe.strMeal}</p>
