@@ -111,6 +111,7 @@ const Body = () => {
         <p id="norecipe">No Recipe Found 🍽️</p>
       ) : (
         <div>
+          <p style={{textAlign:"center", fontWeight:"bolder"}}>Recipes Found : {displayrecipes.length}</p>
           <div id="display-body">
             {displayrecipes.map((recipe, index) => (
               <div id="recipe-card" key={index}>
