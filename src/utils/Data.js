@@ -1,5 +1,12 @@
+import { IoFish } from "react-icons/io5";
+import { GiRoastChicken } from "react-icons/gi";
+import { GiBreadSlice } from "react-icons/gi";
+import { GiTomato } from "react-icons/gi";
+import { GiCarrot } from "react-icons/gi";
+import { TbEggs } from "react-icons/tb";
+
 export const Categories = [
-    "Select Categories",
+  "Select Categories",
   "Beef",
   "Breakfast",
   "Chicken",
@@ -16,7 +23,7 @@ export const Categories = [
   "Vegetarian",
 ];
 export const Areas = [
-    "Select Country",
+  "Select Country",
   "American",
   "British",
   "Canadian",
@@ -47,5 +54,12 @@ export const Areas = [
   "Uruguayan",
   "Vietnamese",
 ];
-export const Youtubelogo="https://www.iconpacks.net/icons/1/free-youtube-icon-123-thumb.png"
+export const ingradient = [
+  { name: "egg", icon: TbEggs,color:"#A52A2A" },
+  { name: "chicken", icon: GiRoastChicken, color:"#ffd916" },
+  { name: "fish", icon: IoFish,color:"skyblue" },
+  {name:"carrot",icon: GiCarrot,color:"#F86A38"},
+  {name:"tomato",icon: GiTomato,color:"red"},
+  {name:"bread",icon: GiBreadSlice,color:"#B07645"}
+];
 
