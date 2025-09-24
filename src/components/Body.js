@@ -15,17 +15,17 @@ const Body = () => {
   const [loading, setloading] = useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalrecipe, setmodalrecipe] = useState([]);
+  const[colors,setcolors]=useState("red");
 
   useEffect(() => {
     fetchdata();}, [searchinput]);
   const fetchdata = async () => {
     const data = await fetch(
-      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + `${searchinput}`
-    );
-
+      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + `${searchinput}`);
+   
     const json = await data.json();
     if (json.meals == null) {
-      setdisplayrecipes([]);
+            setdisplayrecipes([]);
       setallrecipes([]);
       setloading(false);
     } else {
@@ -34,7 +34,14 @@ const Body = () => {
       setloading(false);
     }
   };
+ useEffect(() => {
+    const intervalId = setInterval(() => {
+      colors==="red"?setcolors("black"):setcolors("red")
+    }, 1000); // Updates count every 1 second
 
+    // Cleanup function to clear the interval
+    return () => clearInterval(intervalId);
+  },[colors] );
   function filter(e) {
     let fltcat, fltarea;
     fltarea = area;
@@ -118,7 +125,8 @@ const Body = () => {
       {displayrecipes.length === 0 && loading === true ? (
         <ShimmerUI />
       ) : displayrecipes.length === 0 && loading === false ? (
-        <p id="norecipe">No Recipe Found 🍽️</p>
+       <p  style={{backgroundColor:{colors},width:"20px"}}>No Recipe Found 🍽️</p>
+                         
       ) : (
         <div>
           <p style={{ textAlign: "center", fontWeight: "bolder" }}>
